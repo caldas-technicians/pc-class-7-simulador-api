@@ -1,0 +1,13 @@
+#	API	Enlace directo
+1	Los Simpson	https://thesimpsonsapi.com/api/characters
+2	Dragon Ball	https://dragonball-api.com/api/characters
+3	Disney	https://api.disneyapi.dev/character
+4	Attack on Titan	https://api.attackontitanapi.com/titans
+5	Digimon	https://digi-api.com/api/v1/digimon?pageSize=20
+6	VALORANT	https://valorant-api.com/v1/agents?isPlayableCharacter=true
+7	Studio Ghibli	https://ghibliapi.vercel.app/films
+8	Futurama	https://api.sampleapis.com/futurama/characters
+9	Avatar	https://api.sampleapis.com/avatar/characters
+10	Game of Thrones	https://thronesapi.com/api/v2/Characters
+11	Futurama_2	api.sampleapis.com/futurama/characters
+12	TMDB	https://api.themoviedb.org/3/tv/popular

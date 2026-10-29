@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorio fetch · del JSON a la página</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&family=Orbitron:wght@700&family=Playfair+Display:wght@700&family=Press+Start+2P&family=Space+Grotesk:wght@500;700&family=Fredoka:wght@500;700&family=Bebas+Neue&family=Merriweather:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>🧪 Laboratorio fetch</h1>
+  <ol class="steps" id="steps"><li>1 · API</li><li>2 · Puzzle</li><li>3 · Fetch</li><li>4 · Hoja</li><li>5 · Página</li></ol>
+</header>
+<main>
+  <section class="panel" id="s0">
+    <h2>1 · Elige la API</h2>
+    <p>Pega la URL de una API pública que devuelva una lista en JSON. Los parámetros <code>utm_</code> se quitan solos.</p>
+    <input id="url" type="url" value="https://thesimpsonsapi.com/api/characters" aria-label="URL de la API">
+    <p class="err" id="err"></p>
+    <button class="btn" id="go">Empezar el puzzle →</button>
+  </section>
+
+  <section class="panel hide" id="s1">
+    <h2>2 · Ordena los pasos para consumir la API</h2>
+    <p>Toca una pieza (o arrástrala) para ponerla en su lugar. Toca una pieza colocada para devolverla.</p>
+    <div class="puz"><div><h3>Piezas</h3><div id="pool" class="pool"></div></div><div><h3>Tu orden</h3><ol id="slots" class="slots"></ol></div></div>
+    <p class="fb" id="fb"></p>
+    <div class="row"><button class="btn" id="chk">Revisar orden</button><button class="btn alt" id="rst">Reiniciar</button><button class="btn go hide" id="toFetch">Ejecutar el fetch →</button></div>
+  </section>
+
+  <section class="panel hide" id="s2">
+    <h2>3 · Ejecuta el fetch</h2>
+    <pre class="code" id="code"></pre>
+    <div class="state"><span id="cP">Pendiente</span><span id="cF">Cumplida</span><span id="cR">Rechazada</span></div>
+    <button class="btn" id="run">▶ Ejecutar fetch</button>
+    <div class="red hide" id="red"></div>
+    <p class="found" id="found"></p>
+    <button class="btn go hide" id="toSheet">Ver los datos como hoja →</button>
+  </section>
+
+  <section class="panel hide" id="s3">
+    <h2>4 · Tu hoja de datos</h2>
+    <div class="tools"><input id="q" type="search" placeholder="Buscar en la hoja…"><button class="btn sm" id="more">➕ Cargar siguiente página</button><button class="btn sm alt" id="csv">⬇ CSV</button><span id="cnt"></span></div>
+    <div class="fx"><b>fx</b><span id="fx">Toca una celda para ver su contenido completo</span></div>
+    <div class="sheet"><table id="tbl"></table></div>
+    <button class="btn go" id="toGen">Crear página completa con estos datos →</button>
+  </section>
+
+  <section class="panel hide" id="s4">
+    <h2>5 · Elige el diseño de tu página (20 opciones)</h2>
+    <div class="deco-box">
+      <h3>🖼 Imágenes de tu computador (decoración extra)</h3>
+      <p>Opcional: súbelas aunque no estén en la API (máx. 8). Aparecen como banner rotativo arriba de la página que descargues.</p>
+      <div class="row"><input type="file" id="files" accept="image/*" multiple></div>
+      <div class="dthumbs" id="dthumbs"></div>
+    </div>
+    <div class="themes" id="themes"></div>
+    <div class="prev hide" id="prev">
+      <div class="row"><button class="btn" id="dl">⬇ Descargar .html</button><button class="btn alt" id="tab">Abrir en pestaña nueva</button></div>
+      <iframe id="frame" title="Vista previa" sandbox="allow-scripts allow-popups"></iframe>
+    </div>
+  </section>
+</main>
+<script src="script.js" defer></script>
+</body>
+</html>
